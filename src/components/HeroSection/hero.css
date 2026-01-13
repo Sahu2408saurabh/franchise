@@ -1,0 +1,147 @@
+
+.hero-section {
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+
+.form-header {
+  text-align: center;
+  
+}
+
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25;
+  white-space: nowrap;
+  
+}
+.hero-title span {
+  color: #9b0000;
+}
+.hero-subtitle {
+  color: #666;
+  margin-top: 12px;
+}
+
+
+.teacher-wrapper {
+  position: relative;
+  margin-top: 25px;
+}
+.hero-image {
+  
+  position: relative;
+  z-index: 5;
+  height: 350px;
+  width: 800px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+ 
+}
+
+
+
+.form-wrapper {
+  max-width: 400px;
+}
+.form-badge {
+  background: #eef2ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+.form-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.form-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.hero-form-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* FRANCHISE PILL */
+.franchise-pill {
+  display: inline-block;
+  padding: 10px 28px;
+  background: #eef3ff;
+  color: #1f2a6d;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  margin-bottom: 18px;
+}
+
+label span {
+  color: red;
+}
+.verify-btn {
+  width: 100%;
+  background: #9b0000;
+  color: #fff;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+}
+.verify-btn:hover {
+  background: #7f0000;
+}
+.ssl-text {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  color: #777;
+}
+
+
+.yellow-strip {
+  background: #fbbf24;
+  padding: 14px 0;
+  margin-top: 40px;
+}
+.yellow-strip ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+.yellow-strip li::before {
+  content: "●";
+  margin-right: 8px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 30px;
+    white-space: nowrap;
+  }
+  .form-wrapper {
+    margin: auto;
+  }
+  .yellow-strip ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+}
