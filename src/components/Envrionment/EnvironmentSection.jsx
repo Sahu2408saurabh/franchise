@@ -1,5 +1,7 @@
 import React from "react";
-import "./environmentSection.css";
+
+// Images
+import envBg from "../../assets/env.png";
 
 import img1 from "../../assets/img1.png";
 import img2 from "../../assets/img2.png";
@@ -8,34 +10,73 @@ import img4 from "../../assets/img4.png";
 import img5 from "../../assets/img5.png";
 import img6 from "../../assets/img6.png";
 
-
 const EnvironmentSection = () => {
   return (
-    <section className="environment-section">
-      <div className="container text-center text-white">
-
-       
-        <h2 className="env-title">
+    <section
+      className="
+        relative
+        w-full
+        overflow-hidden
+        bg-[#8b0000]
+        bg-no-repeat
+        bg-top
+        bg-cover
+        py-20 sm:py-24 md:py-32
+      "
+      style={{ backgroundImage: `url(${envBg})` }}
+    >
+      {/* Content */}
+      <div className="relative z-20 max-w-[1200px] mx-auto text-center px-4 sm:px-6 md:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white leading-tight">
           A Safe, Loving & <br />
-          <span>Inspiring Environment</span>
+          <span className="text-yellow-400">Inspiring Environment</span>
         </h2>
 
-        <p className="env-desc">
-          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.
-          Faucibus In Libero Risus Semper Habitant Arcu Eget.
+        <p className="text-white text-xs sm:text-sm md:text-base mt-4 max-w-xl mx-auto">
+          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Faucibus In
+          Libero Risus Semper Habitant Arcu Eget.
         </p>
 
-        {/* IMAGE GRID */}
-        <div className="env-gallery">
-          <img src={img1} className="img small" />
-          <img src={img2} className="img small" />
-          <img src={img3} className="img tall" />
-          <img src={img4} className="img small" />
-          <img src={img5} className="img small" />
-          <img src={img6} className="img small" />
-          
+        {/* Gallery */}
+        <div
+          className="
+            mt-12 sm:mt-14 md:mt-16
+            grid gap-3 sm:gap-5 md:gap-6
+            grid-cols-2 sm:grid-cols-3 md:grid-cols-7
+            items-center
+          "
+        >
+          <img
+            src={img1}
+            alt=""
+            className="w-full h-32 sm:h-36 md:h-44 object-cover rounded-2xl border-2 border-yellow-400"
+          />
+          <img
+            src={img2}
+            alt=""
+            className="w-full h-32 sm:h-36 md:h-44 object-cover rounded-2xl border-2 border-yellow-400"
+          />
+          <img
+            src={img3}
+            alt=""
+            className="w-full h-52 sm:h-48 md:h-64 object-cover rounded-2xl border-2 border-yellow-400 md:row-span-2"
+          />
+          <img
+            src={img4}
+            alt=""
+            className="w-full h-32 sm:h-36 md:h-44 object-cover rounded-2xl border-2 border-yellow-400"
+          />
+          <img
+            src={img5}
+            alt=""
+            className="w-full h-32 sm:h-36 md:h-44 object-cover rounded-2xl border-2 border-yellow-400"
+          />
+          <img
+            src={img6}
+            alt=""
+            className="w-full h-32 sm:h-36 md:h-44 object-cover rounded-2xl border-2 border-yellow-400"
+          />
         </div>
-
       </div>
     </section>
   );

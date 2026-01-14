@@ -1,0 +1,90 @@
+.aim-section {
+  background: #24135f;
+  width: 100%;
+}
+
+/* Title */
+.aim-title {
+  font-weight: 600;
+  line-height: 1.4;
+}
+.aim-title .highlight {
+  color: #f6c21c;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* Teacher images */
+.teacher-wrap {
+  width: 300px;          /* background circle size */
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;      /* circle mask */
+}
+
+.teacher-wrap.yellow {
+  background: #f6c21c;
+}
+
+.teacher-wrap.purple {
+  background: #3a2a7a;
+}
+
+.teacher-img {
+  width: auto;           /* image apne original proportion me rahe */
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;   /* cut nahi hogi */
+  border-radius: 50%;    /* image bhi round dikhe */
+}
+
+/* Decorative Icons – fixed positions */
+.icon-union {
+  position: absolute;
+  top: 14%;
+  left: 10%;
+  width: 52px;
+}
+.icon-star1 {
+  position: absolute;
+  top: 18%;
+  right: 18%;
+  width: 22px;
+}
+.icon-arrow {
+  position: absolute;
+  top: 42%;
+  left: 22%;
+  width: 70px;
+}
+.icon-dots {
+  position: absolute;
+  top: 48%;
+  right: 28%;
+  width: 90px;
+}
+.icon-star2 {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  width: 40px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .teacher-wrap {
+    width: 130px;
+    height: 130px;
+  }
+
+  .icon-union { top: 10%; left: 6%; width: 40px; }
+  .icon-star1 { top: 14%; right: 10%; }
+  .icon-arrow { top: 46%; left: 10%; width: 60px; }
+  .icon-dots  { top: 55%; right: 10%; width: 70px; }
+  .icon-star2 { top: 58%; right: 4%; width: 30px; }
+}

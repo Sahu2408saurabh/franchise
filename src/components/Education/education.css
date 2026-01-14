@@ -1,0 +1,56 @@
+.preschool-img {
+  max-width: 420px;
+  /* margin-left: 80px;  */
+}
+/* .box{
+    padding-left: 100px;
+
+} */
+.preschool-italic {
+  color: #9c0404;             
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 26px;
+}
+
+
+
+.check-icon {
+  min-width: 20px;
+  height: 20px;
+  
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 26px;
+  margin-right: 12px;
+  font-size: 13px;
+}
+.btn{
+  border-radius: 10px;
+    background: #7a0101 !important;
+  border: none;
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+
+  padding: 8px 26px;
+  height: 40px;
+    box-shadow: 0 6px 10px rgba(148, 115, 115, 0.25);
+
+  
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    90% 100%,
+    92% 100%,
+    0 100%
+  );
+
+  
+    
+  transition: all 0.2s ease;
+}

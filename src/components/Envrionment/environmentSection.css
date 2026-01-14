@@ -1,95 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* Remove side scroll */
+}
+
+/* ===== SECTION ===== */
 .environment-section {
-  background: #9b0000;
-  padding: 80px 0;
   position: relative;
-  overflow: hidden;
-}
-
-/* CLOUD TOP & BOTTOM */
-.environment-section::before,
-.environment-section::after {
-  content: "";
-  position: absolute;
-  left: 0;
   width: 100%;
-  height: 80px;
-  background: white;
-  border-radius: 0 0 100% 100%;
+  overflow: hidden; /* Remove white border on sides */
+  background: #8b0000; /* Fallback solid color */
+  padding: 120px 0 140px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.environment-section::before {
-  top: 0;
+/* ===== CONTENT WRAPPER ===== */
+.env-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
 }
 
-.environment-section::after {
-  bottom: 0;
-  transform: rotate(180deg);
-}
-
-/* TITLE */
+/* ===== TITLE ===== */
 .env-title {
   font-size: 42px;
   font-weight: 800;
-  margin-bottom: 12px;
+  color: #fff;
+  line-height: 1.2;
 }
 
 .env-title span {
   color: #f7c600;
-  font-family: cursive;
 }
 
-/* DESC */
 .env-desc {
   max-width: 720px;
-  margin: 0 auto 50px;
+  margin: 14px auto 0;
+  color: #f2f2f2;
   font-size: 14px;
-  opacity: 0.9;
 }
 
-/* GALLERY */
+/* ===== GALLERY ===== */
 .env-gallery {
+  margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 18px;
   align-items: center;
 }
 
-/* IMAGE STYLE */
-.env-gallery .img {
+.env-img {
   width: 100%;
-  object-fit: cover;
-  border-radius: 24px;
-  border: 3px solid #f7c600;
-}
-
-/* SIZES */
-.env-gallery .small {
   height: 170px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 3px solid #f7c600;
+  background: #fff;
 }
 
-.env-gallery .tall {
+/* Center image */
+.env-img.center {
   height: 260px;
   grid-row: span 2;
 }
 
-/* RESPONSIVE */
+/* ===== TABLET ===== */
 @media (max-width: 992px) {
+  .env-title {
+    font-size: 32px;
+  }
+
   .env-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .env-img.center {
+    grid-row: auto;
+    height: 200px;
+  }
 }
 
+/* ===== MOBILE ===== */
 @media (max-width: 576px) {
+  .environment-section {
+    padding: 80px 0 100px;
+  }
+
   .env-title {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .env-gallery {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
-  .env-gallery .tall {
-    grid-row: auto;
-    height: 200px;
+  .env-img {
+    height: 150px;
   }
 }
