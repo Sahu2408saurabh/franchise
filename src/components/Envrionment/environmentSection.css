@@ -12,15 +12,16 @@ body {
 .environment-section {
   position: relative;
   width: 100%;
-  overflow: hidden; 
-  background: #8b0000; 
-  padding: 120px 0 140px;
+  /* overflow: hidden;  */
+  background: #fff; 
+  /* padding: 120px 0 140px; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url("../../assets/env.png");
 }
 
-/* ===== CONTENT WRAPPER ===== */
+
 .env-inner {
   position: relative;
   z-index: 2;
