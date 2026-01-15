@@ -34,7 +34,7 @@ const Hero = () => {
           <div className="col-lg-6 d-flex justify-content-end">
             <div className="form-wrapper">
 
-              {/* FORM HEADER */}
+             
 <div className="form-header text-center">
   <span className="franchise-pill">
     Franchise Opportunity
