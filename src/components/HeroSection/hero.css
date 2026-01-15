@@ -1,4 +1,4 @@
-
+/* hero.css */
 .hero-section {
   position: relative;
   background: #ffffff;
@@ -6,74 +6,68 @@
   padding-top: 20px;
 }
 
-
-.form-header {
-  text-align: center;
-  
+/* Hero content */
+.hero-content {
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 10;
 }
 
+.hero-text-content {
+  margin-bottom: 30px;
+}
 
 .hero-title {
-  font-size: 32px;
+  font-size: 2.5rem;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  color: #1a1a1a;
   white-space: nowrap;
-  
 }
+
 .hero-title span {
   color: #9b0000;
 }
+
 .hero-subtitle {
+  font-size: 1.2rem;
   color: #666;
-  margin-top: 12px;
+  margin-bottom: 25px;
+  font-weight: 500;
 }
 
-
+/* Teacher image styling */
 .teacher-wrapper {
   position: relative;
-  margin-top: 25px;
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+  z-index: 5;
 }
+
 .hero-image {
-  
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
   position: relative;
   z-index: 5;
-  height: 350px;
-  width: 800px;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
- 
+  bottom: -10px; /* Connects with yellow strip */
 }
 
-
-
+/* Form styling */
 .form-wrapper {
   max-width: 400px;
-}
-.form-badge {
-  background: #eef2ff;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-}
-.form-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-top: 10px;
-}
-.form-subtitle {
-  font-size: 14px;
-  color: #6b7280;
-  margin-bottom: 16px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero-form-card {
-  background: #fff;
-  padding: 28px;
-  border-radius: 18px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+.form-header {
+  text-align: center;
+  margin-bottom: 25px;
 }
-
 
 .franchise-pill {
   display: inline-block;
@@ -87,61 +81,246 @@
   margin-bottom: 18px;
 }
 
-label span {
-  color: red;
-}
-.verify-btn {
-  width: 100%;
-  background: #9b0000;
-  color: #fff;
-  padding: 12px;
-  border-radius: 30px;
-  border: none;
-  font-weight: 600;
-}
-.verify-btn:hover {
-  background: #7f0000;
-}
-.ssl-text {
-  font-size: 12px;
-  text-align: center;
+.form-title {
+  font-size: 28px;
+  font-weight: 700;
   margin-top: 10px;
-  color: #777;
+  margin-bottom: 10px;
+  color: #1a1a1a;
 }
 
+.form-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.hero-form-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 10;
+}
+
+/* Yellow strip styling */
+.yellow-strip-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-top: 5px solid maroon;
+  border-bottom: 5px solid maroon;
+}
 
 .yellow-strip {
   background: #fbbf24;
-  padding: 14px 0;
-  margin-top: 40px;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
 }
-.yellow-strip ul {
+
+
+.yellow-strip::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #fbbf24;
+  transform: skewY(-2deg);
+  z-index: -1;
+  
+}
+
+.strip-items {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  flex-wrap: nowrap;
 }
-.yellow-strip li::before {
-  content: "●";
-  margin-right: 8px;
+
+.strip-items li {
+  white-space: nowrap;
+  padding: 0 5px;
 }
 
+.dot-separator {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 5px;
+}
 
+/* Responsive styles */
+@media (max-width: 1199px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .strip-items {
+    font-size: 1rem;
+  }
+}
 
+@media (max-width: 991px) {
+  .hero-content {
+    padding-bottom: 60px;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  
+  .hero-subtitle {
+    text-align: center;
+  }
+  
+  .teacher-wrapper {
+    text-align: center;
+  }
+  
+  .hero-image {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-wrapper {
+    margin-top: 40px;
+  }
+  
+  .strip-items {
+    font-size: 0.95rem;
+  }
+}
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 30px;
-    white-space: nowrap;
+    font-size: 2rem;
+    line-height: 1.3;
   }
-  .form-wrapper {
-    margin: auto;
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
   }
-  .yellow-strip ul {
+  
+  .strip-items {
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
+    gap: 10px 20px;
+  }
+  
+  .dot-separator {
+    display: none;
+  }
+  
+  .strip-items li:not(:last-child)::after {
+    content: "•";
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .strip-items li:last-child::after {
+    content: "";
+  }
+  
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .form-wrapper {
+    max-width: 100%;
+  }
+  
+  .hero-form-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding-top: 15px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+    white-space: normal;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .franchise-pill {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+  
+  .form-title {
+    font-size: 24px;
+  }
+  
+  .strip-items {
+    font-size: 0.9rem;
+    gap: 8px 15px;
+  }
+  
+  .yellow-strip {
+    padding: 18px 0;
+  }
+  
+  .teacher-wrapper {
+    margin-top: 20px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  
+  .strip-items {
+    font-size: 0.85rem;
+    gap: 6px 12px;
+  }
+  
+  .strip-items li:not(:last-child)::after {
+    margin-left: 12px;
+  }
+  
+  .hero-form-card {
+    padding: 18px;
+  }
+}
+
+/* Form specific responsive styles */
+@media (max-width: 991px) {
+  .form-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Ensure the image connects properly with yellow strip on all screens */
+@media (min-width: 992px) {
+  .teacher-wrapper {
+    margin-top: 40px;
+  }
+  
+  .hero-image {
+    max-width: 800px;
+    margin-left: 0;
   }
 }
