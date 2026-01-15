@@ -1,47 +1,82 @@
-.preschool-img {
-  max-width: 420px;
-  /* margin-left: 80px;  */
-}
-/* .box{
-    padding-left: 100px;
 
-} */
+.education-container {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+
+.image-wrapper {
+  padding: 0 15px;
+}
+
+.preschool-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.content-box {
+  padding: 20px 30px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
 .preschool-italic {
   color: #9c0404;             
   font-style: italic;
   font-family: "Playfair Display", serif;
   font-weight: 500;
-  font-size: 26px;
+  display: inline-block;
+  margin-top: 5px;
 }
 
 
+.requirements-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2.5rem;
+}
+
+.requirement-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.5;
+}
 
 .check-icon {
-  min-width: 20px;
-  height: 20px;
-  
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 26px;
-  margin-right: 12px;
-  font-size: 13px;
+  min-width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  margin-top: 3px;
+  color: #9c0404;
+  flex-shrink: 0;
 }
-.btn{
-  border-radius: 10px;
-    background: #7a0101 !important;
+
+.download-btn {
+  background: #7a0101;
   border: none;
   color: #fff;
-
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.6px;
-
-  padding: 8px 26px;
-  height: 40px;
-    box-shadow: 0 6px 10px rgba(148, 115, 115, 0.25);
-
-  
+  padding: 14px 32px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(122, 1, 1, 0.3);
   clip-path: polygon(
     0 0,
     100% 0,
@@ -49,8 +84,208 @@
     92% 100%,
     0 100%
   );
+}
 
+.download-btn:hover {
+  background: #5a0101;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(122, 1, 1, 0.4);
+}
+
+.download-btn:active {
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 1199px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
   
-    
-  transition: all 0.2s ease;
+  .content-box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .education-container {
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .content-box {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .requirements-list {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .requirement-item {
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .preschool-img {
+    max-width: 400px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .education-container {
+    padding: 30px 15px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .preschool-italic {
+    font-size: 1.8rem;
+  }
+  
+  .requirement-item {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .requirements-list {
+    text-align: left;
+    max-width: 100%;
+  }
+  
+  .download-btn {
+    padding: 12px 28px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 575px) {
+  .education-container {
+    padding: 25px 10px;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  
+  .preschool-italic {
+    font-size: 1.6rem;
+  }
+  
+  .content-box {
+    padding: 20px 15px;
+  }
+  
+  .requirement-item {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  
+  .check-icon {
+    min-width: 20px;
+    height: 20px;
+    margin-right: 12px;
+  }
+  
+  .download-btn {
+    padding: 12px 24px;
+    font-size: 12px;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .preschool-img {
+    max-width: 300px;
+  }
+}
+
+
+@media (max-width: 399px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .preschool-italic {
+    font-size: 1.4rem;
+  }
+  
+  .requirement-item {
+    font-size: 0.9rem;
+  }
+  
+  .check-icon {
+    min-width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+  
+  .download-btn {
+    padding: 10px 20px;
+    font-size: 11px;
+  }
+  
+  .preschool-img {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .education-container {
+    padding: 80px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .preschool-italic {
+    font-size: 3rem;
+  }
+  
+  .requirement-item {
+    font-size: 1.2rem;
+  }
+  
+  .download-btn {
+    padding: 16px 40px;
+    font-size: 16px;
+  }
+  
+  .preschool-img {
+    max-width: 500px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .education-container {
+    padding: 30px 20px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .requirements-list {
+    margin-bottom: 1.5rem;
+  }
+  
+  .requirement-item {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
 }

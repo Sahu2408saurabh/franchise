@@ -1,90 +1,208 @@
 .aim-section {
   background: #24135f;
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Title */
+
 .aim-title {
   font-weight: 600;
   line-height: 1.4;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 .aim-title .highlight {
   color: #f6c21c;
   font-style: italic;
   font-weight: 700;
+  text-transform: lowercase;
+  position: relative;
 }
 
-/* Teacher images */
+
+.btn-learn-more {
+  background: white;
+  color: #24135f;
+  border: none;
+  padding: 12px 32px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+.btn-learn-more:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.teacher-row {
+  margin-top: 4rem !important;
+}
+
 .teacher-wrap {
-  width: 300px;          /* background circle size */
+  width: 300px;
   height: 300px;
   margin: 0 auto;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;      /* circle mask */
+  overflow: visible;   
+  position: relative;
+  border: 8px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.teacher-wrap:hover {
+  transform: scale(1.05);
 }
 
 .teacher-wrap.yellow {
   background: #f6c21c;
+  border-color: rgba(246, 194, 28, 0.3);
 }
 
 .teacher-wrap.purple {
   background: #3a2a7a;
+  border-color: rgba(58, 42, 122, 0.3);
 }
 
 .teacher-img {
-  width: auto;           /* image apne original proportion me rahe */
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;   /* cut nahi hogi */
-  border-radius: 50%;    /* image bhi round dikhe */
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
-/* Decorative Icons – fixed positions */
+
 .icon-union {
   position: absolute;
-  top: 14%;
-  left: 10%;
-  width: 52px;
+  top: 10%;
+  left: 5%;
+  width: 50px;
+  transform: rotate(-10deg);
 }
+
 .icon-star1 {
   position: absolute;
-  top: 18%;
-  right: 18%;
-  width: 22px;
+  top: 15%;
+  right: 15%;
+  width: 25px;
+  animation: float 3s ease-in-out infinite;
 }
+
+
 .icon-arrow {
   position: absolute;
-  top: 42%;
-  left: 22%;
-  width: 70px;
+  top: 24%; 
+  left: 28%;
+  width: 65px;
+  transform: rotate(15deg);
+  z-index: 2;
 }
+
 .icon-dots {
   position: absolute;
-  top: 48%;
-  right: 28%;
-  width: 90px;
+  top: 55%;
+  right: 30%;
+  width: 85px;
+  opacity: 0.9;
 }
+
 .icon-star2 {
   position: absolute;
-  top: 50%;
-  right: 8%;
-  width: 40px;
+  top: 45%;
+  right: 5%;
+  width: 35px;
+  animation: float 2.5s ease-in-out infinite;
 }
 
-/* Responsive tweaks */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .icon-arrow {
+    left: 55%;
+  }
+}
+
+@media (max-width: 992px) {
+  .icon-arrow {
+    left: 58%;
+  }
+}
+
 @media (max-width: 768px) {
+  .aim-section {
+    padding: 3rem 0;
+  }
+  
+  .aim-title {
+    font-size: 1.8rem;
+  }
+  
   .teacher-wrap {
-    width: 130px;
-    height: 130px;
+    width: 180px;
+    height: 180px;
   }
 
-  .icon-union { top: 10%; left: 6%; width: 40px; }
-  .icon-star1 { top: 14%; right: 10%; }
-  .icon-arrow { top: 46%; left: 10%; width: 60px; }
-  .icon-dots  { top: 55%; right: 10%; width: 70px; }
-  .icon-star2 { top: 58%; right: 4%; width: 30px; }
+  
+  .icon-union { 
+    top: 5%; 
+    left: 3%; 
+    width: 35px; 
+  }
+  
+  .icon-star1 { 
+    top: 8%; 
+    right: 8%; 
+    width: 18px; 
+  }
+  
+  .icon-arrow { 
+    top: 30%;
+    left: 30%;
+    width: 50px;
+  }
+  
+  .icon-dots { 
+    top: 65%; 
+    right: 58%; 
+    width: 60px; 
+  }
+  
+  .icon-star2 { 
+    top: 50%; 
+    right: 5%; 
+    width: 25px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .teacher-wrap {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .teacher-row {
+    margin-top: 2.5rem !important;
+  }
+  
+  .icon-arrow {
+    top: 33%;
+    left: 8%;
+    width: 40px;
+  }
 }

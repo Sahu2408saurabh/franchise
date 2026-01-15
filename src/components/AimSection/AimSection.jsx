@@ -14,9 +14,28 @@ import union from "../../assets/Union.png";
 import "./aim.css";
 
 const AimSection = () => {
+  const teachers = [
+    { 
+      img: t1, 
+     
+    },
+    { 
+      img: t2, 
+     
+    },
+    { 
+      img: t3, 
+   
+    },
+    { 
+      img: t4, 
+      
+    },
+  ];
+
   return (
     <section className="aim-section position-relative overflow-hidden">
-      {/* Decorative Icons */}
+      
       <img src={union} alt="" className="icon-union" />
       <img src={star1} alt="" className="icon-star1" />
       <img src={arrow} alt="" className="icon-arrow" />
@@ -26,31 +45,25 @@ const AimSection = () => {
       <div className="container text-center text-white position-relative py-5">
         <h2 className="aim-title">
           We aim to help children <br />
-          <span className="highlight">Discover the joy of creative</span> <br />
+          <span className="highlight">discover the joy of creative</span> <br />
           learning and grow into well- <br />
           rounded individuals
         </h2>
 
-        <div className="mt-3">
-          <button className="btn btn-light rounded-pill px-4 py-2">
+        <div className="mt-4">
+          <button className="btn-learn-more rounded-pill">
             Learn more
+            <span className="ms-2">➡️</span>
           </button>
         </div>
 
-        {/* Teachers */}
-        <div className="row justify-content-center mt-5 ">
-          {[
-            { img: t1},
-            { img: t2 },
-            { img: t3 },
-            { img: t4 },
-          ].map((t, i) => (
-            <div key={i} className="col-6 col-md-3 text-center">
-              <div className={`teacher-wrap ${t.bg}`}>
-                <img src={t.img} alt="" className="teacher-img" />
+       
+        <div className="row justify-content-center mt-5 teacher-row">
+          {teachers.map((teacher, index) => (
+            <div key={index} className="col-6 col-md-3 text-center mb-4">
+              <div className={`teacher-wrap ${teacher.bg}`}>
+                <img src={teacher.img} alt={`Teacher ${index + 1}`} className="teacher-img" />
               </div>
-
-             
             </div>
           ))}
         </div>

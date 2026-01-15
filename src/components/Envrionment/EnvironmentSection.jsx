@@ -34,48 +34,71 @@ const EnvironmentSection = () => {
 
         <p className="text-white text-xs sm:text-sm md:text-base mt-4 max-w-xl mx-auto">
           Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Faucibus In
-          Libero Risus Semper Habitant Arcu Eget.
+          Libero Risus Semper Habitant Arcu Eget. Et Integer. Lorem Ipsum Dolor
         </p>
 
-        {/* Gallery */}
+        
         <div
           className="
             mt-12 sm:mt-14 md:mt-16
-            grid gap-3 sm:gap-5 md:gap-6
+            grid gap-3 sm:gap-4 md:gap-6
             grid-cols-2 sm:grid-cols-3 md:grid-cols-7
             items-center
           "
         >
-          <img
-            src={img1}
-            alt=""
-            className="w-full h-32 sm:h-36 md:h-44 object-cover rounded-2xl border-2 border-yellow-400"
-          />
-          <img
-            src={img2}
-            alt=""
-            className="w-full h-32 sm:h-36 md:h-44 object-cover rounded-2xl border-2 border-yellow-400"
-          />
-          <img
-            src={img3}
-            alt=""
-            className="w-full h-52 sm:h-48 md:h-64 object-cover rounded-2xl border-2 border-yellow-400 md:row-span-2"
-          />
-          <img
-            src={img4}
-            alt=""
-            className="w-full h-32 sm:h-36 md:h-44 object-cover rounded-2xl border-2 border-yellow-400"
-          />
-          <img
-            src={img5}
-            alt=""
-            className="w-full h-32 sm:h-36 md:h-44 object-cover rounded-2xl border-2 border-yellow-400"
-          />
-          <img
-            src={img6}
-            alt=""
-            className="w-full h-32 sm:h-36 md:h-44 object-cover rounded-2xl border-2 border-yellow-400"
-          />
+          
+          <div className="w-full">
+            <img
+              src={img1}
+              alt=""
+              className="w-full h-32 sm:h-36 md:h-44 lg:h-[170px] object-cover rounded-2xl border-2 md:border-3 border-yellow-400 bg-white"
+            />
+          </div>
+
+         
+          <div className="w-full">
+            <img
+              src={img2}
+              alt=""
+              className="w-full h-32 sm:h-36 md:h-44 lg:h-[170px] object-cover rounded-2xl border-2 md:border-3 border-yellow-400 bg-white"
+            />
+          </div>
+
+          
+          <div className="w-full md:row-span-2">
+            <img
+              src={img3}
+              alt=""
+              className="w-full h-40 sm:h-48 md:h-64 lg:h-[260px] object-cover rounded-2xl border-2 md:border-3 border-yellow-400 bg-white"
+            />
+          </div>
+
+         
+          <div className="w-full">
+            <img
+              src={img4}
+              alt=""
+              className="w-full h-32 sm:h-36 md:h-44 lg:h-[170px] object-cover rounded-2xl border-2 md:border-3 border-yellow-400 bg-white"
+            />
+          </div>
+
+          
+          <div className="w-full">
+            <img
+              src={img5}
+              alt=""
+              className="w-full h-32 sm:h-36 md:h-44 lg:h-[170px] object-cover rounded-2xl border-2 md:border-3 border-yellow-400 bg-white"
+            />
+          </div>
+
+          
+          <div className="w-full">
+            <img
+              src={img6}
+              alt=""
+              className="w-full h-32 sm:h-36 md:h-44 lg:h-[170px] object-cover rounded-2xl border-2 md:border-3 border-yellow-400 bg-white"
+            />
+          </div>
         </div>
       </div>
     </section>
