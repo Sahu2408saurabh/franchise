@@ -13,7 +13,6 @@ const Hero = () => {
                 India's First International Preschool <br />
                 for <span>Confident Global Citizens</span>
               </h1>
-
               <p className="hero-subtitle">
                 Where Little Voices Grow into Powerful Futures
               </p>
@@ -34,7 +33,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Yellow Strip - Updated to match image */}
+     
       <div className="yellow-strip-container">
         <div className="yellow-strip">
           <div className="container">

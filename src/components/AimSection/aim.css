@@ -1,7 +1,7 @@
 .aim-section {
   background: #24135f;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -26,9 +26,11 @@
 
 
 .btn-learn-more {
-  background: white;
-  color: #24135f;
-  border: none;
+  /* background: white;
+  color: #24135f; */
+  background-color: #24135f;
+  color: white;
+  
   padding: 12px 32px;
   font-weight: 600;
   font-size: 1.1rem;
@@ -159,6 +161,7 @@
   }
 
   
+
   .icon-union { 
     top: 5%; 
     left: 3%; 
@@ -192,12 +195,12 @@
 
 @media (max-width: 576px) {
   .teacher-wrap {
-    width: 140px;
-    height: 140px;
+    width: 240px;
+    height: 240px;
   }
   
   .teacher-row {
-    margin-top: 2.5rem !important;
+    margin-top: 1.5rem !important;
   }
   
   .icon-arrow {

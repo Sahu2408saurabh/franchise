@@ -51,9 +51,9 @@ const AimSection = () => {
         </h2>
 
         <div className="mt-4">
-          <button className="btn-learn-more rounded-pill">
+          <button className="btn btn-learn-more btn-outline-light rounded-pill">
             Learn more
-            <span className="ms-2">➡️</span>
+            
           </button>
         </div>
 
