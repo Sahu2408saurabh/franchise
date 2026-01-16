@@ -1,21 +1,22 @@
 .aim-section {
   background: #24135f;
   width: 100%;
-  min-height: 80vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
 }
 
-
+/* Title Styling */
 .aim-title {
   font-weight: 600;
   line-height: 1.4;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   margin-bottom: 1.5rem;
   position: relative;
 }
+
 .aim-title .highlight {
   color: #f6c21c;
   font-style: italic;
@@ -24,37 +25,38 @@
   position: relative;
 }
 
-
+/* Button Styling */
 .btn-learn-more {
-  /* background: white;
-  color: #24135f; */
   background-color: #24135f;
   color: white;
-  
   padding: 12px 32px;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
+  border: 2px solid white;
 }
+
 .btn-learn-more:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  background-color: white;
+  color: #24135f;
 }
 
-
-.teacher-row {
-  margin-top: 4rem !important;
+/* Teacher Styling */
+.teacher-item {
+  padding: 10px;
 }
 
 .teacher-wrap {
-  width: 300px;
-  height: 300px;
+  width: 180px;
+  height: 180px;
   margin: 0 auto;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;   
+  overflow: visible;
   position: relative;
   border: 8px solid transparent;
   transition: all 0.3s ease;
@@ -75,19 +77,119 @@
 }
 
 .teacher-img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 50%;
 }
 
+/* Carousel Container */
+.carousel-container {
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
 
+.carousel-slides {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 220px;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn.prev-btn {
+  left: 0;
+}
+
+.carousel-btn.next-btn {
+  right: 0;
+}
+
+.carousel-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  margin-top: 2rem;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator-dot.active {
+  background: #f6c21c;
+  transform: scale(1.2);
+}
+
+.indicator-dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Teacher Counter */
+.teacher-counter {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.counter-text {
+  color: #f6c21c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Decorative Elements */
 .icon-union {
   position: absolute;
   top: 10%;
   left: 5%;
   width: 50px;
   transform: rotate(-10deg);
+  z-index: 1;
 }
 
 .icon-star1 {
@@ -96,12 +198,12 @@
   right: 15%;
   width: 25px;
   animation: float 3s ease-in-out infinite;
+  z-index: 1;
 }
-
 
 .icon-arrow {
   position: absolute;
-  top: 24%; 
+  top: 24%;
   left: 28%;
   width: 65px;
   transform: rotate(15deg);
@@ -114,6 +216,7 @@
   right: 30%;
   width: 85px;
   opacity: 0.9;
+  z-index: 1;
 }
 
 .icon-star2 {
@@ -122,6 +225,7 @@
   right: 5%;
   width: 35px;
   animation: float 2.5s ease-in-out infinite;
+  z-index: 1;
 }
 
 @keyframes float {
@@ -133,35 +237,102 @@
   }
 }
 
+/* Responsive Styles */
 
-@media (max-width: 1200px) {
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .teacher-wrap {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .carousel-btn {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .carousel-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .carousel-btn.prev-btn {
+    left: -25px;
+  }
+  
+  .carousel-btn.next-btn {
+    right: -25px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+  .teacher-wrap {
+    width: 160px;
+    height: 160px;
+  }
+  
   .icon-arrow {
     left: 55%;
   }
 }
 
-@media (max-width: 992px) {
+/* Tablet Landscape */
+@media (max-width: 991.98px) and (min-width: 768px) {
+  .teacher-wrap {
+    width: 140px;
+    height: 140px;
+  }
+  
   .icon-arrow {
     left: 58%;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile Large */
+@media (max-width: 767.98px) {
   .aim-section {
     padding: 3rem 0;
+    min-height: auto;
   }
   
   .aim-title {
     font-size: 1.8rem;
+    line-height: 1.3;
   }
   
   .teacher-wrap {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
-
   
-
+  .btn-learn-more {
+    padding: 10px 28px;
+    font-size: 1rem;
+  }
+  
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-btn.prev-btn {
+    left: 10px;
+  }
+  
+  .carousel-btn.next-btn {
+    right: 10px;
+  }
+  
+  .carousel-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Adjust decorative elements for mobile */
   .icon-union { 
     top: 5%; 
     left: 3%; 
@@ -193,14 +364,29 @@
   }
 }
 
-@media (max-width: 576px) {
-  .teacher-wrap {
-    width: 240px;
-    height: 240px;
+/* Mobile Small */
+@media (max-width: 575.98px) {
+  .aim-title {
+    font-size: 1.6rem;
   }
   
-  .teacher-row {
-    margin-top: 1.5rem !important;
+  .teacher-wrap {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .carousel-controls {
+    margin-top: 1.5rem;
+  }
+  
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .indicator-dot {
+    width: 10px;
+    height: 10px;
   }
   
   .icon-arrow {
@@ -208,4 +394,76 @@
     left: 8%;
     width: 40px;
   }
+  
+  .icon-dots {
+    top: 68%;
+    right: 10%;
+    width: 50px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 375px) {
+  .aim-title {
+    font-size: 1.4rem;
+  }
+  
+  .teacher-wrap {
+    width: 140px;
+    height: 140px;
+    border-width: 6px;
+  }
+  
+  .btn-learn-more {
+    padding: 8px 24px;
+    font-size: 0.9rem;
+  }
+  
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .carousel-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .counter-text {
+    font-size: 0.8rem;
+  }
+}
+
+/* Ensure proper spacing on all screens */
+.teachers-carousel-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Accessibility improvements */
+.carousel-btn:focus,
+.indicator-dot:focus {
+  outline: 2px solid #f6c21c;
+  outline-offset: 2px;
+}
+
+/* Animation for slide change */
+@keyframes slideIn {
+  from {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.teacher-item {
+  animation: slideIn 0.4s ease-out;
+}
+
+/* Hide buttons when only one slide */
+.carousel-btn.hidden {
+  display: none;
 }

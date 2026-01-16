@@ -1,7 +1,7 @@
 import React from "react";
 
 // Images
-// import envBg from "../../assets/env.png";
+ import envBg from "../../assets/env2.png";
 
 import img1 from "../../assets/img1.png";
 import img2 from "../../assets/img2.png";
@@ -16,14 +16,14 @@ const EnvironmentSection = () => {
       className="
         relative
         w-full
-        overflow-hidden
-        bg-[#8b0000]
-        bg-no-repeat
-        bg-top
-        bg-cover
-        py-20 sm:py-24 md:py-32
+        
+        bg-[#fff]
+        
+        // bg-top
+        // bg-cover
+        py-10 sm:py-14 md:py-22
       "
-      // style={{ backgroundImage: `url(${envBg})` }}
+       style={{ backgroundImage: `url(${envBg})` }}
     >
       {/* Content */}
       <div className="relative z-20 max-w-[1200px] mx-auto text-center px-4 sm:px-6 md:px-8">

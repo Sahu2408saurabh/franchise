@@ -12,15 +12,19 @@ function App() {
     <>
       <Navbar />
       <Hero/>
-      <AboutUs/>
-      <br/>
+      {/* <AboutUs/>
+      <br/> */}
       
       <EnvironmentSection/>
-      <Education/>
+      <br/>
+      <AboutUs/>
 
-      <AimSection/>
-      {/* <TestimonialsSection/>
-      */}
+
+      {/* <Education/>
+
+      <AimSection/> */}
+      {/* <TestimonialsSection/> */}
+     
       
       
       

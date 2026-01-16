@@ -15,7 +15,7 @@ const testimonials = [
     name: "Judy Robert",
     image: "https://randomuser.me/api/portraits/women/65.jpg",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod",
-    rating:4 ,
+    rating: 4,
   },
   {
     name: "Anna Smith",
@@ -33,88 +33,194 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-5 bg-white">
+    <section className="py-4 py-md-5 bg-white">
       <div className="container">
-        <div className="row align-items-center g-5">
-
-         
-          <div className="col-lg-6 text-center">
+        {/* Mobile: Image on top - Full width */}
+        <div className="row mb-4 mb-md-0">
+          <div className="col-12 d-block d-lg-none text-center">
             <img
               src={test}
               alt="Mom and child"
-              className="img-fluid"
-              style={{ maxWidth: "500px" }}
+              className="img-fluid mobile-image"
             />
           </div>
+        </div>
 
-          
+        <div className="row align-items-center">
+          {/* Desktop: Image on left side */}
+          <div className="col-lg-6 d-none d-lg-block">
+            <div className="text-center">
+              <img
+                src={test}
+                alt="Mom and child"
+                className="img-fluid desktop-image"
+                style={{ maxWidth: "100%" }}
+              />
+            </div>
+          </div>
+
+          {/* Testimonials Content */}
           <div className="col-lg-6">
-            <h2 className="fw-bold mb-3">
-              <span className="fst-italic text-danger">Testimonials</span> from moms
-              <br />
-              who are proud to entrust
-              <br />
-              their children to us
-            </h2>
+            {/* Mobile: Heading below image */}
+            <div className="text-center text-lg-start">
+              <h2 className="fw-bold mb-3 mb-md-4 testimonial-title">
+                <span className="fst-italic text-danger">Testimonials</span> from moms
+                <br className="d-none d-md-block" />
+                who are proud to entrust
+                <br className="d-none d-md-block" />
+                their children to us
+              </h2>
 
-            <p className="text-muted mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.
-            </p>
+              <p className="text-muted mb-4 mb-lg-5 testimonial-subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.
+              </p>
+            </div>
 
-          
-            <div className="position-relative mt-4">
-              <button
-                className="slider-btn left"
-                data-bs-target="#testimonialCarousel"
-                data-bs-slide="prev"
-              >
-                ←
-              </button>
+            {/* Desktop Carousel - Shows 2 cards */}
+            <div className="d-none d-lg-block">
+              <div className="position-relative">
+                <div id="desktopCarousel" className="carousel slide" data-bs-ride="carousel">
+                  <div className="carousel-inner">
+                    {[0, 2].map((start, idx) => (
+                      <div
+                        key={idx}
+                        className={`carousel-item ${idx === 0 ? "active" : ""}`}
+                      >
+                        <div className="row g-4">
+                          {testimonials.slice(start, start + 2).map((item, i) => (
+                            <div className="col-md-6" key={i}>
+                              <div className="testimonial-card text-center h-100">
+                                <div className="card-content">
+                                  <p className="testimonial-text mb-3">{item.text}</p>
 
-              <button
-                className="slider-btn right"
-                data-bs-target="#testimonialCarousel"
-                data-bs-slide="next"
-              >
-                →
-              </button>
+                                  <div className="stars mb-3">
+                                    {Array.from({ length: item.rating }).map((_, j) => (
+                                      <span key={j}>★</span>
+                                    ))}
+                                  </div>
 
-              <div id="testimonialCarousel" className="carousel slide">
-                <div className="carousel-inner">
-
-                  {[0, 2].map((start, idx) => (
-                    <div
-                      key={idx}
-                      className={`carousel-item ${idx === 0 ? "active" : ""}`}
-                    >
-                      <div className="row g-4">
-                        {testimonials.slice(start, start + 2).map((item, i) => (
-                          <div className="col-md-6" key={i}>
-                            <div className="testimonial-card text-center">
-                              <p>{item.text}</p>
-
-                              <div className="stars">
-                                {Array.from({ length: item.rating }).map((_, j) => (
-                                  <span key={j}>★</span>
-                                ))}
+                                  <div className="avatar-wrapper">
+                                    <div className="avatar mb-2">
+                                      <img src={item.image} alt={item.name} className="img-fluid" />
+                                    </div>
+                                    <h6 className="testimonial-name mb-0">{item.name}</h6>
+                                  </div>
+                                </div>
                               </div>
-
-                              <div className="avatar">
-                                <img src={item.image} alt={item.name} />
-                              </div>
-
-                              <h6>{item.name}</h6>
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
 
+                  {/* Desktop Carousel Controls */}
+                  <button
+                    className="carousel-control-prev desktop-control"
+                    type="button"
+                    data-bs-target="#desktopCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next desktop-control"
+                    type="button"
+                    data-bs-target="#desktopCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                </div>
+
+                {/* Desktop Indicators */}
+                <div className="carousel-indicators-container mt-4">
+                  <div className="carousel-indicators">
+                    {[0, 1].map((index) => (
+                      <button
+                        key={index}
+                        type="button"
+                        data-bs-target="#desktopCarousel"
+                        data-bs-slide-to={index}
+                        className={index === 0 ? "active" : ""}
+                        aria-label={`Slide ${index + 1}`}
+                      ></button>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
 
+            {/* Mobile Carousel - Shows 1 card */}
+            <div className="d-block d-lg-none mt-4">
+              <div id="mobileCarousel" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-inner">
+                  {testimonials.map((item, index) => (
+                    <div
+                      key={index}
+                      className={`carousel-item ${index === 0 ? "active" : ""}`}
+                    >
+                      <div className="testimonial-card text-center mx-auto h-100">
+                        <div className="card-content">
+                          <p className="testimonial-text mb-3">{item.text}</p>
+
+                          <div className="stars mb-3">
+                            {Array.from({ length: item.rating }).map((_, j) => (
+                              <span key={j}>★</span>
+                            ))}
+                          </div>
+
+                          <div className="avatar-wrapper">
+                            <div className="avatar mb-2">
+                              <img src={item.image} alt={item.name} className="img-fluid" />
+                            </div>
+                            <h6 className="testimonial-name mb-0">{item.name}</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Mobile Carousel Controls */}
+                <button
+                  className="carousel-control-prev mobile-control"
+                  type="button"
+                  data-bs-target="#mobileCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button
+                  className="carousel-control-next mobile-control"
+                  type="button"
+                  data-bs-target="#mobileCarousel"
+                  data-bs-slide="next"
+                >
+                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              {/* Mobile Indicators */}
+              <div className="carousel-indicators-container mt-4">
+                <div className="carousel-indicators">
+                  {testimonials.map((_, index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      data-bs-target="#mobileCarousel"
+                      data-bs-slide-to={index}
+                      className={index === 0 ? "active" : ""}
+                      aria-label={`Slide ${index + 1}`}
+                    ></button>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
