@@ -19,8 +19,8 @@ function App() {
       <Education/>
 
       <AimSection/>
-      <TestimonialsSection/>
-     
+      {/* <TestimonialsSection/>
+      */}
       
       
       

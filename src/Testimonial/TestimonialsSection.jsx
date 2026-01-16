@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import test from "../assets/test.png";
+import test from "../assets/test1.png";
 import "./testimonials.css";
 
 const testimonials = [
