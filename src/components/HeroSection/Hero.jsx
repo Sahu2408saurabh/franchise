@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* ===== EXACT IMAGE STRIP ===== */}
+      
       <div className="strip-wrapper">
         <div className="strip-maroon"></div>
 

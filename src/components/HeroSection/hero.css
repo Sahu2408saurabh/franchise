@@ -1,4 +1,4 @@
-/* ================= HERO ================= */
+
 
 .hero-section {
   background: #fff;
@@ -28,33 +28,32 @@
   display: block;
 }
 
-/* ================= IMAGE STRIP ================= */
+
 
 .strip-wrapper {
   position: relative;
   width: 100%;
-  height: 90px;        /* overall space */
+  height: 90px;        
   overflow: hidden;
 }
 
-/* MAROON STRIP (STRAIGHT) */
 .strip-maroon {
   position: absolute;
   top: 45%;
   left: -10%;
   width: 110%;
-  height: 60px;        /* image thickness */
+  height: 60px;        
   background: #7b0000;
   transform: translateY(-50%);
 }
 
-/* YELLOW STRIP (ROTATED) */
+
 .strip-yellow {
   position: absolute;
   top: 45%;
   left: -5%;
   width: 110%;
-  height: 70px;        /* SAME HEIGHT EVERYWHERE */
+  height: 70px;       
   background: #fbbf24;
 
   display: flex;
@@ -79,13 +78,13 @@
   white-space: nowrap;
 }
 
-/* DOTS */
+
 .strip-items .dot {
   font-size: 20px;
   line-height: 1;
 }
 
-/* ================= RESPONSIVE ================= */
+
 
 @media (max-width: 992px) {
   .strip-items {

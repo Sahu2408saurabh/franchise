@@ -14,15 +14,15 @@ function App() {
       <Hero/>
       <AboutUs/>
       <br/>
-    
-      <EnvironmentSection/>
       
+      <EnvironmentSection/>
+      <br/>
 
 
        <Education/>
 
       <AimSection/> 
-      <TestimonialsSection/> 
+       <TestimonialsSection/>
      
       
       

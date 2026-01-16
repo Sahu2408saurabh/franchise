@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
   return (
     <section className="py-4 py-md-5 bg-white">
       <div className="container">
-        {/* Mobile: Image on top - Full width */}
+        
         <div className="row mb-4 mb-md-0">
           <div className="col-12 d-block d-lg-none text-center">
             <img
@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="row align-items-center">
-          {/* Desktop: Image on left side */}
+          
           <div className="col-lg-6 d-none d-lg-block">
             <div className="text-center">
               <img
@@ -59,9 +59,9 @@ export default function TestimonialsSection() {
             </div>
           </div>
 
-          {/* Testimonials Content */}
+          
           <div className="col-lg-6">
-            {/* Mobile: Heading below image */}
+            
             <div className="text-center text-lg-start">
               <h2 className="fw-bold mb-3 mb-md-4 testimonial-title">
                 <span className="fst-italic text-danger">Testimonials</span> from moms
@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
               </p>
             </div>
 
-            {/* Desktop Carousel - Shows 2 cards */}
+            
             <div className="d-none d-lg-block">
               <div className="position-relative">
                 <div id="desktopCarousel" className="carousel slide" data-bs-ride="carousel">
@@ -114,7 +114,7 @@ export default function TestimonialsSection() {
                     ))}
                   </div>
 
-                  {/* Desktop Carousel Controls */}
+                  
                   <button
                     className="carousel-control-prev desktop-control"
                     type="button"
@@ -135,7 +135,7 @@ export default function TestimonialsSection() {
                   </button>
                 </div>
 
-                {/* Desktop Indicators */}
+                
                 <div className="carousel-indicators-container mt-4">
                   <div className="carousel-indicators">
                     {[0, 1].map((index) => (
@@ -153,7 +153,7 @@ export default function TestimonialsSection() {
               </div>
             </div>
 
-            {/* Mobile Carousel - Shows 1 card */}
+          
             <div className="d-block d-lg-none mt-4">
               <div id="mobileCarousel" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
@@ -184,7 +184,7 @@ export default function TestimonialsSection() {
                   ))}
                 </div>
 
-                {/* Mobile Carousel Controls */}
+              
                 <button
                   className="carousel-control-prev mobile-control"
                   type="button"
@@ -205,7 +205,7 @@ export default function TestimonialsSection() {
                 </button>
               </div>
 
-              {/* Mobile Indicators */}
+              
               <div className="carousel-indicators-container mt-4">
                 <div className="carousel-indicators">
                   {testimonials.map((_, index) => (
