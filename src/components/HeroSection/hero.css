@@ -1,540 +1,111 @@
+/* ================= HERO ================= */
+
 .hero-section {
-  position: relative;
-  background: #ffffff;
+  background: #fff;
   overflow: hidden;
-  padding-top: 20px;
-  width: 100%;
-}
-
-.hero-content {
-  padding-bottom: 15px;
-  position: relative;
-  z-index: 10;
-  width: 100%;
-}
-
-.hero-text-content {
-  margin-bottom: 30px;
-  width: 100%;
 }
 
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 15px;
   color: #1a1a1a;
-  
-}
-
-.hero-title br {
-  display: block;
 }
 
 .hero-title span {
-  color: #9b0000;
+  color: #8b0000;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
   color: #666;
-  margin-bottom: 25px;
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-/* Teacher image styling */
-.teacher-wrapper {
-  position: relative;
-  margin-top: 30px;
-  width: 100%;
-  height: auto;
-  z-index: 5;
+  margin: 15px 0 25px;
 }
 
 .hero-image {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
-  position: relative;
-  z-index: 5;
-  object-fit: contain;
 }
 
-/* Form styling */
-.form-wrapper {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
+/* ================= IMAGE STRIP ================= */
 
-.form-header {
-  text-align: center;
-  margin-bottom: 25px;
-  width: 100%;
-}
-
-.franchise-pill {
-  display: inline-block;
-  padding: 10px 28px;
-  background: #eef3ff;
-  color: #1f2a6d;
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-  margin-bottom: 18px;
-}
-
-.form-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #1a1a1a;
-  line-height: 1.3;
-}
-
-.form-subtitle {
-  font-size: 14px;
-  color: #6b7280;
-  margin-bottom: 16px;
-  line-height: 1.5;
-}
-
-.hero-form-card {
-  background: #fff;
-  padding: 28px;
-  border-radius: 18px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-  position: relative;
-  z-index: 10;
-  width: 100%;
-}
-
-/* Yellow strip section */
-.yellow-strip-container {
+.strip-wrapper {
   position: relative;
   width: 100%;
+  height: 90px;        /* overall space */
   overflow: hidden;
-  border-top: 5px solid maroon;
-  border-bottom: 5px solid maroon;
-  margin-top: -5px;
 }
 
-.yellow-strip {
-  background: #fbbf24;
-  padding: 20px 0;
-  position: relative;
-  z-index: 1;
-  width: 100%;
+/* MAROON STRIP (STRAIGHT) */
+.strip-maroon {
+  position: absolute;
+  top: 45%;
+  left: -10%;
+  width: 110%;
+  height: 60px;        /* image thickness */
+  background: #7b0000;
+  transform: translateY(-50%);
 }
+
+/* YELLOW STRIP (ROTATED) */
+.strip-yellow {
+  position: absolute;
+  top: 45%;
+  left: -5%;
+  width: 110%;
+  height: 70px;        /* SAME HEIGHT EVERYWHERE */
+  background: #fbbf24;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%) rotate(-1deg);
+}
+
 
 .strip-items {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 10px 20px;
+  gap: 40px;           
   list-style: none;
   margin: 0;
   padding: 0;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #1a1a1a;
-  text-align: center;
-}
 
-.strip-items li {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
   white-space: nowrap;
-  padding: 0 5px;
 }
 
-.dot-separator {
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 1.5rem;
-  font-weight: bold;
-  display: inline-block;
+/* DOTS */
+.strip-items .dot {
+  font-size: 20px;
+  line-height: 1;
 }
 
-/* ===== RESPONSIVE BREAKPOINTS ===== */
+/* ================= RESPONSIVE ================= */
 
-/* Large desktops (1200px and above) */
-@media (min-width: 1200px) {
-  .hero-title {
-    font-size: 2.8rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.3rem;
-  }
-  
+@media (max-width: 992px) {
   .strip-items {
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 0;
+    flex-wrap: wrap;
+    gap: 20px 24px;
+    font-size: 14px;
+  }
+
+  .strip-wrapper {
+    height: 110px;
   }
 }
 
-/* Medium desktops and tablets landscape (992px - 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .hero-title {
-    font-size: 2.3rem;
-  }
-  
+@media (max-width: 576px) {
   .strip-items {
-    font-size: 1rem;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 0;
-  }
-  
-  .teacher-wrapper {
-    margin-top: 40px;
-  }
-  
-  .hero-image {
-    max-width: 800px;
-    margin-left: 0;
-  }
-}
-
-/* Tablets and small desktops (768px - 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .hero-content {
-    padding-bottom: 60px;
-  }
-  
-  .hero-title {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-  
-  .hero-title br {
-    display: none;
-  }
-  
-  .hero-subtitle {
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 0 10px;
-  }
-  
-  .teacher-wrapper {
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .hero-image {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .form-wrapper {
-    margin-top: 40px;
-    max-width: 450px;
-  }
-  
-  .strip-items {
-    font-size: 1rem;
-    justify-content: center;
-    gap: 15px 30px;
-  }
-  
-  .dot-separator {
-    display: none;
-  }
-  
-  .strip-items li {
-    position: relative;
-    padding-right: 20px;
-  }
-  
-  .strip-items li:not(:last-child)::after {
-    content: "•";
-    position: absolute;
-    right: -10px;
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-}
-
-/* Mobile landscape and small tablets (576px - 767px) */
-@media (min-width: 576px) and (max-width: 767px) {
-  .hero-section {
-    padding-top: 15px;
-  }
-  
-  .hero-title {
-    font-size: 2rem;
-    text-align: center;
-    line-height: 1.3;
-    padding: 0 10px;
-  }
-  
-  .hero-title br {
-    display: none;
-  }
-  
-  .hero-subtitle {
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 0 15px;
-    margin-bottom: 20px;
-  }
-  
-  .teacher-wrapper {
-    margin-top: 30px;
-  }
-  
-  .form-wrapper {
-    margin-top: 30px;
-    max-width: 400px;
-  }
-  
-  .hero-form-card {
-    padding: 24px;
-  }
-  
-  .form-title {
-    font-size: 26px;
-  }
-  
-  .strip-items {
-    font-size: 0.95rem;
-    gap: 10px 25px;
-  }
-  
-  .yellow-strip {
-    padding: 18px 0;
-  }
-  
-  .strip-items li:not(:last-child)::after {
-    content: "•";
-    margin-left: 15px;
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 1.3rem;
-  }
-  
-  .dot-separator {
-    display: none;
-  }
-}
-
-/* Mobile portrait (425px - 575px) */
-@media (min-width: 425px) and (max-width: 575px) {
-  .hero-title {
-    font-size: 1.8rem;
-    padding: 0 15px;
-  }
-  
-  .hero-subtitle {
-    font-size: 1rem;
-    padding: 0 20px;
-  }
-  
-  .franchise-pill {
-    padding: 8px 22px;
     font-size: 13px;
+    gap: 16px 20px;
   }
-  
-  .form-title {
-    font-size: 24px;
-  }
-  
-  .form-subtitle {
-    font-size: 13px;
-    padding: 0 5px;
-  }
-  
-  .hero-form-card {
-    padding: 22px;
-  }
-  
-  .strip-items {
-    font-size: 0.9rem;
-    gap: 8px 20px;
-  }
-  
-  .strip-items li {
-    padding: 2px 0;
-  }
-  
-  .strip-items li:not(:last-child)::after {
-    margin-left: 15px;
-    font-size: 1.2rem;
-  }
-  
-  .teacher-wrapper {
-    margin-top: 25px;
-  }
-}
 
-/* Small mobile (375px - 424px) */
-@media (min-width: 375px) and (max-width: 424px) {
-  .hero-title {
-    font-size: 1.7rem;
-    padding: 0 10px;
-  }
-  
-  .hero-subtitle {
-    font-size: 0.95rem;
-    padding: 0 15px;
-  }
-  
-  .form-wrapper {
-    padding: 0 10px;
-  }
-  
-  .hero-form-card {
-    padding: 20px;
-  }
-  
-  .form-title {
-    font-size: 22px;
-  }
-  
-  .strip-items {
-    font-size: 0.85rem;
-    gap: 6px 15px;
-  }
-  
-  .strip-items li:not(:last-child)::after {
-    margin-left: 12px;
-    font-size: 1.1rem;
-  }
-  
-  .yellow-strip {
-    padding: 16px 0;
-  }
-}
-
-/* Extra small mobile (320px - 374px) */
-@media (min-width: 320px) and (max-width: 374px) {
-  .hero-section {
-    padding-top: 10px;
-  }
-  
-  .hero-title {
-    font-size: 1.6rem;
-    padding: 0 8px;
-    line-height: 1.25;
-  }
-  
-  .hero-subtitle {
-    font-size: 0.9rem;
-    padding: 0 10px;
-    margin-bottom: 15px;
-  }
-  
-  .franchise-pill {
-    padding: 6px 18px;
-    font-size: 12px;
-  }
-  
-  .form-title {
-    font-size: 20px;
-  }
-  
-  .form-subtitle {
-    font-size: 12px;
-  }
-  
-  .hero-form-card {
-    padding: 18px;
-  }
-  
-  .strip-items {
-    font-size: 0.8rem;
-    gap: 5px 12px;
-  }
-  
-  .strip-items li:not(:last-child)::after {
-    margin-left: 10px;
-    font-size: 1rem;
-  }
-  
-  .teacher-wrapper {
-    margin-top: 20px;
-  }
-}
-
-/* Very small mobile (below 320px) */
-@media (max-width: 319px) {
-  .hero-title {
-    font-size: 1.4rem;
-    padding: 0 5px;
-  }
-  
-  .hero-subtitle {
-    font-size: 0.85rem;
-    padding: 0 8px;
-  }
-  
-  .strip-items {
-    font-size: 0.75rem;
-    gap: 4px 8px;
-  }
-  
-  .strip-items li:not(:last-child)::after {
-    margin-left: 8px;
-  }
-  
-  .hero-form-card {
-    padding: 15px;
-  }
-  
-  .form-title {
+  .strip-items .dot {
     font-size: 18px;
-  }
-}
-
-/* Special handling for very wide screens */
-@media (min-width: 1600px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.4rem;
-  }
-  
-  .strip-items {
-    font-size: 1.2rem;
-  }
-}
-
-/* Height-based adjustments for very short screens */
-@media (max-height: 700px) and (min-width: 992px) {
-  .hero-content {
-    padding-bottom: 10px;
-  }
-  
-  .teacher-wrapper {
-    margin-top: 20px;
-  }
-  
-  .hero-image {
-    max-height: 350px;
-    object-fit: contain;
-  }
-}
-
-/* Print styles */
-@media print {
-  .hero-section {
-    padding-top: 10px;
-  }
-  
-  .hero-form-card {
-    box-shadow: none;
-    border: 1px solid #ddd;
-  }
-  
-  .yellow-strip-container {
-    border-top: 2px solid maroon;
-    border-bottom: 2px solid maroon;
   }
 }

@@ -8,23 +8,20 @@ const Hero = () => {
       <div className="container hero-content">
         <div className="row align-items-center">
           <div className="col-lg-6">
-            <div className="hero-text-content">
-              <h1 className="hero-title">
-                India's First International Preschool <br />
-                for <span>Confident Global Citizens</span>
-              </h1>
-              <p className="hero-subtitle">
-                Where Little Voices Grow into Powerful Futures
-              </p>
-            </div>
+            <h1 className="hero-title">
+              India's First International Preschool <br />
+              for <span>Confident Global Citizens</span>
+            </h1>
 
-            <div className="teacher-wrapper">
-              <img
-                src={teacherImg}
-                alt="Teacher with students"
-                className="hero-image"
-              />
-            </div>
+            <p className="hero-subtitle">
+              Where Little Voices Grow into Powerful Futures
+            </p>
+
+            <img
+              src={teacherImg}
+              alt="Teacher"
+              className="hero-image"
+            />
           </div>
 
           <div className="col-lg-6 d-flex justify-content-end">
@@ -33,22 +30,22 @@ const Hero = () => {
         </div>
       </div>
 
-     
-      <div className="yellow-strip-container">
-        <div className="yellow-strip">
-          <div className="container">
-            <ul className="strip-items">
-              <li>Financial Literacy</li>
-              <li className="dot-separator">•</li>
-              <li>Maths</li>
-              <li className="dot-separator">•</li>
-              <li>Personality Development</li>
-              <li className="dot-separator">•</li>
-              <li>Confidence Building</li>
-              <li className="dot-separator">•</li>
-              <li>Public Speaking</li>
-            </ul>
-          </div>
+      {/* ===== EXACT IMAGE STRIP ===== */}
+      <div className="strip-wrapper">
+        <div className="strip-maroon"></div>
+
+        <div className="strip-yellow">
+          <ul className="strip-items">
+            <li>Financial Literacy</li>
+            <li className="dot">●</li>
+            <li>Maths</li>
+            <li className="dot">●</li>
+            <li>Personality Development</li>
+            <li className="dot">●</li>
+            <li>Confidence Building</li>
+            <li className="dot">●</li>
+            <li>Public Speaking</li>
+          </ul>
         </div>
       </div>
     </section>
