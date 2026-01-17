@@ -1,0 +1,129 @@
+.why-partner {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.title span {
+  color: #e63946;
+  font-family: cursive;
+}
+
+.subtitle {
+  text-align: center;
+  max-width: 650px;
+  margin: 15px auto 60px;
+  color: #777;
+}
+
+/* MAIN LAYOUT */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT IMAGE */
+.left img {
+  width: 420px;
+  max-width: 100%;
+}
+
+/* RIGHT */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* CARD */
+.info-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 26px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  width: 420px;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c3e50;
+  z-index: 2;
+}
+
+/* ICON */
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* ICON COLORS */
+.icon.pink {
+  background: #ffd6d6;
+  color: #d32f2f;
+}
+
+.icon.purple {
+  background: #dedcff;
+  color: #5b4bdb;
+}
+
+/* SEMI CIRCLE BACKGROUND */
+.card-bg {
+  position: absolute;
+  left: 60px;
+  bottom: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.card-bg.pink-bg {
+  background: #fff1f1;
+}
+
+.card-bg.purple-bg {
+  background: #f2f3ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .info-card {
+    width: 100%;
+  }
+
+  .left img {
+    width: 300px;
+  }
+}
