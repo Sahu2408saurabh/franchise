@@ -1,0 +1,165 @@
+.process-section {
+  padding: 90px 0;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.title span {
+  color: #b00000;
+  font-family: cursive;
+}
+
+.subtitle {
+  text-align: center;
+  max-width: 720px;
+  margin: 14px auto 70px;
+  color: #777;
+}
+
+.process-row {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  position: relative;
+}
+
+.process-row.top {
+  flex-wrap: nowrap;
+}
+
+.process-row.bottom {
+  margin-top: 80px;
+  gap: 180px;
+}
+
+
+.process-item {
+  text-align: center;
+  position: relative;
+  width: 220px;
+}
+
+
+.circle {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  border: 2px dashed #c7b7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle img {
+  width: 45px;
+}
+
+.process-item h4 {
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+.process-item p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 6px;
+}
+
+/* ===== ARROWS (DESKTOP ONLY) ===== */
+/* .arrow {
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  border-top: 2px dashed black;
+  border-radius: 50%;
+} */
+
+.arrow-right {
+  top: 40px;
+  right: -130px;
+}
+
+.arrow-left {
+  top:25%;
+  left: 100%;
+  transform: scaleX(-1);
+}
+
+
+@media (max-width: 1199px) {
+  .process-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  .process-row.bottom {
+    margin-top: 60px;
+  }
+
+  .process-item {
+    width: 100%;
+  }
+
+ 
+  .arrow {
+    display: none;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .process-section {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+
+  .process-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-row.bottom {
+    margin-top: 40px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle img {
+    width: 38px;
+  }
+
+  .process-item h4 {
+    font-size: 16px;
+  }
+
+  .process-item p {
+    font-size: 13px;
+  }
+}

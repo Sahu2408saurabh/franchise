@@ -6,6 +6,7 @@ import AimSection from "./components/AimSection/AimSection";
 import Education from "./components/Education/Education";
 import TestimonialsSection from "./Testimonial/TestimonialsSection";
 import WhyPartner from "./components/WhyPartner/WhyPartner";
+import WhyPartnerProcess from "./components/WhyPartnerProcess/WhyPartnerProcess";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <AimSection/> 
        <TestimonialsSection/>
        <WhyPartner/>
+       <WhyPartnerProcess/>
      
       
       

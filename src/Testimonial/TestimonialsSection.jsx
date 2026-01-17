@@ -79,6 +79,8 @@ export default function TestimonialsSection() {
             
             <div className="d-none d-lg-block">
               <div className="position-relative">
+
+                
                 <div id="desktopCarousel" className="carousel slide" data-bs-ride="carousel">
                   <div className="carousel-inner">
                     {[0, 2].map((start, idx) => (
@@ -99,6 +101,9 @@ export default function TestimonialsSection() {
                                     ))}
                                   </div>
 
+
+
+                                  
                                   <div className="avatar-wrapper">
                                     <div className="avatar mb-2">
                                       <img src={item.image} alt={item.name} className="img-fluid" />
@@ -213,6 +218,8 @@ export default function TestimonialsSection() {
                       key={index}
                       type="button"
                       data-bs-target="#mobileCarousel"
+
+                      
                       data-bs-slide-to={index}
                       className={index === 0 ? "active" : ""}
                       aria-label={`Slide ${index + 1}`}
