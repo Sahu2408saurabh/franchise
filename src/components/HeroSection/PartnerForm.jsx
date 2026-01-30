@@ -101,17 +101,24 @@ const PartnerForm = () => {
   };
 
   return (
-    <div className="partner-wrapper d-flex justify-content-center ">
-      <div className="partner-card shadow">
+  <div className="">
+    <h2 className="text-center text">Own the Future</h2>
+
+    <p  className="text-center ">Bring USA’s Global Preschool Experience to Your City</p>
+
+        <h3 className="text-center   mb-1">Book a Call </h3>
+      <div className="partner-wrapper d-flex justify-content-center   margin-top-20">
+        
+      <div className="partner-card bg-warning shadow">
 
         {/* <div className="text-center mb-2">
           <span className="badge franchise-badge">Franchise Opportunity</span>
         </div> */}
 
-        <h2 className="text-center fw-bold mb-1">Partner with Us </h2>
+        
         
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
 
           <div className="mb-2">
             <label className="form-label small">Full Name *</label>
@@ -196,6 +203,7 @@ const PartnerForm = () => {
         </form>
       </div>
     </div>
+  </div>
   );
 };
 

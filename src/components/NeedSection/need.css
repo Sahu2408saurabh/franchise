@@ -1,0 +1,27 @@
+.need{
+    color:maroon
+}
+
+.need-card{
+    border-radius: 10px;
+    height: 180px;
+    width: 180px;
+    border: 3px solid maroon;
+    
+}
+.main-card{
+    margin-top: 50px;
+}
+
+.icon{
+    display: block;
+  justify-content: center; 
+  align-items: center; 
+  height: 8vh;
+  width: 8vh;
+}
+
+.bg-maroon{
+    background-color: maroon;
+    color: white;
+}

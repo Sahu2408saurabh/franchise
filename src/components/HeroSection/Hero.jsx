@@ -14,8 +14,7 @@ const Hero = () => {
             </h1>
 
             <p className="hero-subtitle">
-              World's Largest Eduactional Brand Where Kids Learn Future Human Skills with early Childhood Care and International Exposure with Kids from 20+ countries
-              <br/> <h5>Present In</h5>
+              The Harvard of Early Childhood — Building the world’s future leaders from the very first classroom.            
             </p>
             
 

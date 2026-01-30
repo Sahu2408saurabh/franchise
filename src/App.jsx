@@ -7,6 +7,7 @@ import Education from "./components/Education/Education";
 import TestimonialsSection from "./components/Testimonial/TestimonialsSection";
 import WhyPartner from "./components/WhyPartner/WhyPartner";
 import WhyPartnerProcess from "./components/WhyPartnerProcess/WhyPartnerProcess";
+import Need from "./components/NeedSection/Need";
 
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
     <>
       <Navbar />
       <Hero/>
+      <Need/>
+      
+
       <AboutUs/>
       <br/>
       
