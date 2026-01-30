@@ -11,6 +11,9 @@
 .text-muted{
   padding-left: 20px;
 }
+p{
+  line-height: 2.5;
+}
 .btn{
   margin-left: 20px;
   

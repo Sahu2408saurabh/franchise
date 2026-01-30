@@ -21,7 +21,7 @@
   color: #f6c21c;
   font-style: italic;
   font-weight: 700;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   position: relative;
 }
 

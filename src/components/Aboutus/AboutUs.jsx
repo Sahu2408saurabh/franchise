@@ -17,12 +17,20 @@ const AboutUs = () => {
             About <span>Us</span>
           </h2>
 
-          <p className="text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Faucibus libero risus semper habitant arcu eget. 
-            Et integer. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <h5 className="text-muted">
+           Raising the Next Generation of Global Leaders
+           </h5>
+           <br/>
+<p className="text-muted">
+Oratrics Kidzz is the early-childhood flagship of Oratrics – The Personality School, built to shape confident global citizens from the very start.
+We go beyond school readiness to prepare children for the real world.
+Through confidence building, communication mastery, leadership and financial intelligence, we unlock their true potential.
+Our programs nurture emotional strength, clarity of expression, and global exposure.
+At Oratrics Kidzz, we don’t just educate children — we empower future leaders.
+
           </p>
 
+          
          <button className="btn btn-danger learn-more-btn">
   LEARN MORE
 </button>

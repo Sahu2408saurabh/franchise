@@ -33,8 +33,21 @@ const EnvironmentSection = () => {
         </h2>
 
         <p className="text-white text-xs sm:text-sm md:text-base mt-4 max-w-xl mx-auto">
-          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Faucibus In
-          Libero Risus Semper Habitant Arcu Eget.
+          A Secure, Nurturing & Intellectually Stimulating World
+        </p>
+
+         <p className="text-white text-xs sm:text-sm md:text-base mt-4 max-w-xl mx-auto">
+          Every Oratrics Kidzz campus is designed as a premium learning sanctuary where:
+<br/>
+* Children feel emotionally safe and deeply valued
+<br/>
+* Curiosity is celebrated
+<br/>
+* Confidence is cultivated daily
+<br/>
+* Expression is encouraged, never suppressed
+<br/>
+* Global etiquette and cultural sensitivity are introduced naturally
         </p>
 
         {/* Gallery */}

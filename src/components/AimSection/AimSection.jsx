@@ -121,10 +121,9 @@ const AimSection = () => {
 
       <div className="container text-center text-white position-relative py-5">
         <h2 className="aim-title">
-          We aim to help children 
-          <span className="highlight"> discover the joy of creative</span> <br />
-          learning and grow into well- 
-          rounded individuals
+          Internationally Certified 
+          <span className="highlight"> Educators & Child</span> <br />
+          Development Specialists
         </h2>
 
         <div className="mt-4">

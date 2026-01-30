@@ -104,14 +104,12 @@ const PartnerForm = () => {
     <div className="partner-wrapper d-flex justify-content-center ">
       <div className="partner-card shadow">
 
-        <div className="text-center mb-2">
+        {/* <div className="text-center mb-2">
           <span className="badge franchise-badge">Franchise Opportunity</span>
-        </div>
+        </div> */}
 
-        <h2 className="text-center fw-bold mb-1">Partner with Us</h2>
-        <p className="text-center text-muted small mb-2">
-          Start your journey with India's leading preschool network.
-        </p>
+        <h2 className="text-center fw-bold mb-1">Partner with Us </h2>
+        
 
         <form onSubmit={handleSubmit}>
 
@@ -184,28 +182,16 @@ const PartnerForm = () => {
 
           <div className="form-check mb-2">
           
-            <input className="form-check-input" type="checkbox" required />
-            <label className="form-check-label small text-muted">
-              I confirm minimum investment of
-              <strong> INR 15–20 Lacs</strong> and
-              <br/>
-               agree to
-              <span className="text-danger fw-bold ms-1"> Privacy Policy</span> &
-              <span className="text-danger fw-bold ms-1"> Terms</span>
-            </label>
+
           </div>
 
           <button type="submit" className="btn btn-danger w-80 py-1 fw-semibold">
             Verify Mobile Number →
           </button>
 
-          <p className="text-center text-muted small mt-2 mb-1">
-            By clicking Verify, you agree to receive communication.
-          </p>
+         
 
-          <p className="text-center text-muted small mb-0">
-            <FontAwesomeIcon icon={faShieldHalved} /> Secure SSL Encryption
-          </p>
+          
 
         </form>
       </div>

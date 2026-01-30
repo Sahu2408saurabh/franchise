@@ -23,32 +23,53 @@ const Education = () => {
 
         <div className="col-lg-6 col-md-6 col-sm-12 content-box">
           <h2 className="section-title mb-3">
-            Requirements to <br /> 
+            OPEN A PRESCHOOL <br /> 
             <span className="preschool-italic">
-              Open a Preschool
+              FRANCHISE QUALIFICATION
             </span>
           </h2>
+          <p>Who Can Become an Oratrics Kidzz Founding Partner?</p>
+
+          <p>We invite educators, entrepreneurs, corporate professionals and investors who:</p>
 
           <ul className="requirements-list mt-4 mb-4">
             <li className="requirement-item">
               <span className="check-icon">
                 <FontAwesomeIcon icon={faCircleCheck} />
               </span>
-              Master program knowledge at school
+             Aspire to build a premium education asset
             </li>
             <li className="requirement-item">
               <span className="check-icon">
                 <FontAwesomeIcon icon={faCircleCheck} />
               </span>
-              The ability to criticize knowledge increases
+              Believe in shaping future global leaders
             </li>
             <li className="requirement-item">
               <span className="check-icon">
                 <FontAwesomeIcon icon={faCircleCheck} />
               </span>
-              Respond confidently when encountering difficult situations
+              Seek a stable, high-trust, high-impact business
+            </li>
+            <li className="requirement-item">
+              <span className="check-icon">
+                <FontAwesomeIcon icon={faCircleCheck} />
+              </span>
+              Value long-term brand equity over short-term gains
+            </li>
+            <li className="requirement-item">
+              <span className="check-icon">
+                <FontAwesomeIcon icon={faCircleCheck} />
+              </span>
+              Are passionate about world-class learning standards
             </li>
           </ul>
+
+          <p>With comprehensive academic systems, branding, marketing, training, technology and operational support, Oratrics Kidzz offers one of the safest and most scalable preschool investment models in the premium segment.
+</p>
+
+          <p>Download the Founding Partner Prospectus</p>
+
 
           <button className="download-btn">
             DOWNLOAD BROCHURE

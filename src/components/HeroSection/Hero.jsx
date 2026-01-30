@@ -14,8 +14,10 @@ const Hero = () => {
             </h1>
 
             <p className="hero-subtitle">
-              Where Little Voices Grow into Powerful Futures
+              World's Largest Eduactional Brand Where Kids Learn Future Human Skills with early Childhood Care and International Exposure with Kids from 20+ countries
+              <br/> <h5>Present In</h5>
             </p>
+            
 
             <img
               src={teacherImg}
@@ -36,15 +38,15 @@ const Hero = () => {
 
         <div className="strip-yellow">
           <ul className="strip-items">
-            <li>Financial Literacy</li>
+            <li>Financial Intelligence for Young Minds</li>
             <li className="dot">●</li>
-            <li>Maths</li>
+            <li>Conceptual Mathematics & Logical Thinking</li>
             <li className="dot">●</li>
-            <li>Personality Development</li>
+            <li>Personality & Emotional Strength</li>
             <li className="dot">●</li>
-            <li>Confidence Building</li>
+            <li>Confidence & Social Presence</li>
             <li className="dot">●</li>
-            <li>Public Speaking</li>
+            <li>Public Speaking & Expressive Communication</li>
           </ul>
         </div>
       </div>
