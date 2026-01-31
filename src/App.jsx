@@ -10,6 +10,9 @@ import WhyPartnerProcess from "./components/WhyPartnerProcess/WhyPartnerProcess"
 import Need from "./components/NeedSection/Need";
 import Invest from "./components/Invest/Invest";
 import GlobalExposure from "./components/GlobalExposure/GlobalExposure";
+import WhyMakesUsDifferent from "./components/WhatMakesUsDifferent/WhatMakesUsDifferent";
+import GlobalCitizens from "./components/GlobalCitizens/GlobalCitizens";
+import ArticlesSection from "./components/ArticlesSection/ArticlesSection";
 
 
 function App() {
@@ -26,17 +29,21 @@ function App() {
 
       <AboutUs/>
       <br/>
+      <GlobalCitizens/>
       
-      <EnvironmentSection/>
+      {/* <WhyMakesUsDifferent/>
       <br/>
 
 
-       <Education/>
+       <Education/> */}
 
       <AimSection/> 
+
+      <ArticlesSection/>
+       {/*
        <TestimonialsSection/>
        <WhyPartner/>
-       <WhyPartnerProcess/>
+       <WhyPartnerProcess/> */}
      
       
       

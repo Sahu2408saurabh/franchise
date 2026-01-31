@@ -99,7 +99,7 @@ const PartnerForm = () => {
 
   return (
     <div className="partner-section">
-      <h2 className="heading">Own the Future</h2>
+      <h1 className="heading">Own the Future</h1>
       <p className="sub-heading">
         Bring USA’s Global Preschool Experience <br />
         to Your City

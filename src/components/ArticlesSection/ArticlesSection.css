@@ -1,0 +1,90 @@
+/* ===== SECTION ===== */
+.articles-section {
+  padding: 80px 100px;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== HEADER ===== */
+.articles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.articles-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.articles-header h2 span {
+  color: #b30000;
+  font-style: italic;
+}
+
+/* ===== MORE ARTICLES BUTTON ===== */
+.more-btn {
+  border: 1.5px solid #b30000;
+  background: transparent;
+  color: #b30000;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* ===== GRID ===== */
+.articles-grid {
+  display: flex;
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+.article-card {
+  width: 320px;
+  background: #f5f5f5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* IMAGE PLACEHOLDER */
+.card-image {
+  height: 170px;
+  background: #d9d9d9;
+}
+
+/* CONTENT */
+.card-content {
+  padding: 20px;
+  background: #ffffff;
+}
+
+.card-content h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+/* READ MORE BUTTON */
+.read-btn {
+  background: #b30000;
+  color: #ffffff;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}

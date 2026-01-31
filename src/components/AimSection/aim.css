@@ -1,472 +1,97 @@
-.aim-section {
+/* ===== SECTION ===== */
+.program-section {
   background: #24135f;
-  width: 100%;
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+  padding: 90px 0;
+  color: white;
+  text-align: center;
 }
 
-/* Title Styling */
-.aim-title {
+/* ===== HEADINGS ===== */
+.heading {
+  font-size: 2.7rem;
   font-weight: 700;
-  line-height: 1.4;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  margin-bottom: 1.5rem;
-  position: relative;
 }
 
-.aim-title .highlight {
+.heading span {
   color: #f6c21c;
   font-style: italic;
-  font-weight: 700;
-  /* text-transform: lowercase; */
-  position: relative;
 }
 
-/* Button Styling */
-.btn-learn-more {
-  background-color: #24135f;
-  color: white;
-  padding: 12px 32px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+.desc {
+  max-width: 850px;
+  margin: 16px auto;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* ===== BUTTON ===== */
+.learn-more {
+  margin-top: 25px;
+  padding: 10px 32px;
+  border-radius: 30px;
   border: 2px solid white;
-}
-
-.btn-learn-more:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
-  background-color: white;
-  color: #24135f;
-}
-
-/* Teacher Styling */
-.teacher-item {
-  padding: 10px;
-}
-
-.teacher-wrap {
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;
-  position: relative;
-  border: 8px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.teacher-wrap:hover {
-  transform: scale(1.05);
-}
-
-/* .teacher-wrap.yellow {
-  background: #f6c21c;
-  border-color: rgba(246, 194, 28, 0.3);
-}
-
-.teacher-wrap.purple {
-  background: #3a2a7a;
-  border-color: rgba(58, 42, 122, 0.3);
-} */
-
-.teacher-img {
-  /* width: 100%;
-  height: 100%; */
-  width: 300px;
-  height: 300px;
-
-  object-fit: contain;
-  border-radius: 50%;
-}
-
-/* Carousel Container */
-.carousel-container {
-  padding: 20px 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-slides {
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  min-height: 220px;
-}
-
-/* Carousel Buttons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
   color: white;
+  font-weight: 600;
+}
+
+/* ===== CARD ROW ===== */
+.card-row {
+  margin-top: 60px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-
-.carousel-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-btn:active {
-  transform: translateY(-50%) scale(0.95);
-}
-
-.carousel-btn.prev-btn {
-  left: 0;
-}
-
-.carousel-btn.next-btn {
-  right: 0;
-}
-
-.carousel-btn svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* Carousel Controls */
-.carousel-controls {
-  margin-top: 2rem;
-}
-
-.carousel-indicators {
-  display: flex;
-  gap: 12px;
+  gap: 28px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.indicator-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.indicator-dot.active {
-  background: #f6c21c;
-  transform: scale(1.2);
-}
-
-.indicator-dot:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-/* Teacher Counter */
-.teacher-counter {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.counter-text {
-  color: #f6c21c;
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-}
-
-/* Decorative Elements */
-.icon-union {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  width: 50px;
-  transform: rotate(-10deg);
-  z-index: 1;
-}
-
-.icon-star1 {
-  position: absolute;
-  top: 15%;
-  right: 15%;
-  width: 25px;
-  animation: float 3s ease-in-out infinite;
-  z-index: 1;
-}
-
-.icon-arrow {
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  width: 65px;
-  transform: rotate(15deg);
-  z-index: 2;
-}
-
-.icon-dots {
-  position: absolute;
-  top: 48%;
-  right: 30%;
-  width: 85px;
-  opacity: 0.9;
-  z-index: 1;
-}
-
-.icon-star2 {
-  position: absolute;
-  top: 45%;
-  right: 5%;
-  width: 35px;
-  animation: float 2.5s ease-in-out infinite;
-  z-index: 1;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/* Responsive Styles */
-
-/* Large Desktop */
-@media (min-width: 1400px) {
-  .teacher-wrap {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .carousel-btn {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .carousel-btn svg {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-/* Desktop */
-@media (min-width: 992px) {
-  .carousel-btn.prev-btn {
-    left: -25px;
-  }
-  
-  .carousel-btn.next-btn {
-    right: -25px;
-  }
-}
-
-/* Tablet */
-@media (max-width: 1199px) {
-  .teacher-wrap {
-    width: 160px;
-    height: 160px;
-  }
-  
-  .icon-arrow {
-    left: 55%;
-  }
-}
-
-/* Tablet Landscape */
-@media (max-width: 991.98px) and (min-width: 768px) {
-  .teacher-wrap {
-    width: 140px;
-    height: 140px;
-  }
-  
-  .icon-arrow {
-    left: 58%;
-  }
-}
-
-/* Mobile Large */
-@media (max-width: 767.98px) {
-  .aim-section {
-    padding: 3rem 0;
-    min-height: auto;
-  }
-  
-  .aim-title {
-    font-size: 1.8rem;
-    line-height: 1.3;
-  }
-  
-  .teacher-wrap {
-    width: 250px;
-    height: 250px;
-  }
-  
-  .btn-learn-more {
-    padding: 10px 28px;
-    font-size: 1rem;
-  }
-  
-  .carousel-btn {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .carousel-btn.prev-btn {
-    left: 10px;
-  }
-  
-  .carousel-btn.next-btn {
-    right: 10px;
-  }
-  
-  .carousel-btn svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  /* Adjust decorative elements for mobile */
-  .icon-union { 
-    top: 5%; 
-    left: 3%; 
-    width: 35px; 
-  }
-  
-  .icon-star1 { 
-    top: 8%; 
-    right: 8%; 
-    width: 18px; 
-  }
-  
-  .icon-arrow { 
-    top: 30%;
-    left: 30%;
-    width: 50px;
-  }
-  
-  .icon-dots { 
-    top: 65%; 
-    right: 58%; 
-    width: 60px; 
-  }
-  
-  .icon-star2 { 
-    top: 50%; 
-    right: 5%; 
-    width: 25px; 
-  }
-}
-
-/* Mobile Small */
-@media (max-width: 575.98px) {
-  .aim-title {
-    font-size: 1.6rem;
-  }
-  
-  .teacher-wrap {
-    width: 300px;
-    height: 300px;
-  }
-  
-  .carousel-controls {
-    margin-top: 1.5rem;
-  }
-  
-  .carousel-btn {
-    width: 36px;
-    height: 36px;
-  }
-  
-  .indicator-dot {
-    width: 10px;
-    height: 10px;
-  }
-  
-  .icon-arrow {
-    top: 33%;
-    left: 8%;
-    width: 40px;
-  }
-  
-  .icon-dots {
-    top: 68%;
-    right: 10%;
-    width: 50px;
-  }
-}
-
-/* Extra Small Screens */
-@media (max-width: 375px) {
-  .aim-title {
-    font-size: 1.4rem;
-  }
-  
-  .teacher-wrap {
-    width: 140px;
-    height: 140px;
-    border-width: 6px;
-  }
-  
-  .btn-learn-more {
-    padding: 8px 24px;
-    font-size: 0.9rem;
-  }
-  
-  .carousel-btn {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .carousel-btn svg {
-    width: 14px;
-    height: 14px;
-  }
-  
-  .counter-text {
-    font-size: 0.8rem;
-  }
-}
-
-/* Ensure proper spacing on all screens */
-.teachers-carousel-container {
+/* ===== CARD ===== */
+.program-card {
+  width: 280px;
+  height: 260px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
   position: relative;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  color: #24135f;
 }
 
-/* Accessibility improvements */
-.carousel-btn:focus,
-.indicator-dot:focus {
-  outline: 2px solid #f6c21c;
-  outline-offset: 2px;
+/* ===== ACTIVE CARD ===== */
+.program-card.active {
+  background: #f6c21c;
+  height: 280px;
 }
 
-/* Animation for slide change */
-@keyframes slideIn {
-  from {
-    opacity: 0.5;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+/* ===== TOP RIGHT ARROW ===== */
+.arrow-box {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1.5px solid #24135f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
 }
 
-.teacher-item {
-  animation: slideIn 0.4s ease-out;
+/* ===== TOP LEFT ICON ===== */
+.icon-box {
+  position: absolute;
+  top: 60px;
+  left: 22px;
+  font-size: 26px;
 }
 
-/* Hide buttons when only one slide */
-.carousel-btn.hidden {
-  display: none;
+/* ===== TEXT ===== */
+.card-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: pre-line;
 }
