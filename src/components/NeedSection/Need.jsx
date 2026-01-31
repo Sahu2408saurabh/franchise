@@ -1,57 +1,47 @@
-import React from 'react'
-import './need.css'
-import need from '../../assets/need.png'
+import React from "react";
+import "./need.css";
+import need from "../../assets/need.png";
 
 const Need = () => {
+  const cards = [
+    {
+      title: "3000+ Sq. Ft. Premium Space",
+      desc: "Designed to create a world-class early leadership environment.",
+    },
+    {
+      title: "Investment 25–30 Lakh ",
+      desc: " Affordable entry for a high-return opportunity.",
+    },
+    {
+      title: "Strategic Urban Location",
+      desc: "High-aspiration parent catchment with premium positioning.",
+    },
+    {
+      title: "Investment in Excellence",
+      desc: "A brand built for long-term value, not short-term volume.",
+    },
+  ];
+
   return (
-    <div className='hh'>
+    <div className="need-section">
+      <h1 className="title">
+        What you <span>Need</span> is
+      </h1>
 
-        <h1 className='text-center mt-5'>What you <span className='need'>Need</span> is</h1>
-
-        <div className='d-flex main-card  justify-content-center align-items-center gap-5 mt-5 flex-wrap'>
-            <div className='need-card border-1 p-4 m-2'>
-
-                <img src={need} className='icon' alt="icon" />
-                <h5 className='text-center'>At least</h5>
-                <h4 >3500+ sq.ft</h4>
-                <h6 className='text-center'>of Space</h6>
-            </div>
-
-            <div className='need-card border-1 bg-maroon  p-4 m-2'>
-
-                <img src={need} className='icon' alt="icon" />
-                <h5 className='text-center'>At least</h5>
-                <h4 >3500+ sq.ft</h4>
-                <h6 className='text-center'>of Space</h6>
-            </div>
-
-            <div className='need-card border-1 p-4 m-2'>
-
-                <img src={need} className='icon' alt="icon" />
-                <h5 className='text-center'>At least</h5>
-                <h4 >3500+ sq.ft</h4>
-                <h6 className='text-center'>of Space</h6>
-            </div>
-
-            <div className='need-card border-1 p-4 m-2'>
-
-                <img src={need} className='icon' alt="icon" />
-                <h5 className='text-center'>At least</h5>
-                <h4 >3500+ sq.ft</h4>
-                <h6 className='text-center'>of Space</h6>
-            </div>
-           
-            
-        </div>
-
-
-        
-
-
-
-
+      <div className="need-grid">
+        {cards.map((item, index) => (
+          <div
+            key={index}
+            className={`need-card ${index === 1 ? "active" : ""}`}
+          >
+            <img src={need} alt="icon" />
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Need
+export default Need;

@@ -8,6 +8,7 @@ import TestimonialsSection from "./components/Testimonial/TestimonialsSection";
 import WhyPartner from "./components/WhyPartner/WhyPartner";
 import WhyPartnerProcess from "./components/WhyPartnerProcess/WhyPartnerProcess";
 import Need from "./components/NeedSection/Need";
+import Invest from "./components/Invest/Invest";
 
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
       <Navbar />
       <Hero/>
       <Need/>
+
+      <Invest/>
       
 
       <AboutUs/>

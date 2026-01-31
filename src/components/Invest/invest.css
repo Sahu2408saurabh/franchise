@@ -1,0 +1,134 @@
+.invest {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.invest-wrapper {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT IMAGE */
+.invest-left {
+  position: relative;
+  flex: 1;
+}
+
+.invest-left img {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 2;
+}
+
+/* BACKGROUND SHAPES */
+.bg-shape {
+  position: absolute;
+  border-radius: 40px;
+  z-index: 1;
+}
+
+.bg-shape.yellow {
+  width: 220px;
+  height: 160px;
+  background: #ffbe0b;
+  top: 120px;
+  left: -30px;
+}
+
+.bg-shape.red {
+  width: 180px;
+  height: 180px;
+  background: #d90429;
+  border-radius: 50%;
+  top: 30px;
+  right: 40px;
+}
+
+.bg-shape.purple {
+  width: 200px;
+  height: 120px;
+  background: #e0c3fc;
+  bottom: 40px;
+  left: 60px;
+}
+
+/* RIGHT CONTENT */
+.invest-right {
+  flex: 1.2;
+}
+
+.invest-right h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.invest-right h2 span {
+  color: maroon;
+  font-style: italic;
+}
+
+.invest-subtitle {
+  color: #6b7280;
+  max-width: 520px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* CARDS GRID */
+.invest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.invest-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 2px 2px maroon;
+  transition: all 0.3s ease;
+}
+
+.invest-card:hover {
+  transform: translateY(-6px);
+}
+
+.icon-box {
+  width: 42px;
+  height: 42px;
+  background: #ffbe0b;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.invest-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.invest-card p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .invest-wrapper {
+    flex-direction: column;
+  }
+
+  .invest-grid {
+    grid-template-columns: 1fr;
+  }
+}
