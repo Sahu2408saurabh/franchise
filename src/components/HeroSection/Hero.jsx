@@ -32,7 +32,7 @@ const Hero = () => {
       </div>
 
       
-      <div className="strip-wrapper">
+      {/* <div className="strip-wrapper">
         <div className="strip-maroon"></div>
 
         <div className="strip-yellow">
@@ -48,7 +48,7 @@ const Hero = () => {
             <li>Public Speaking & Expressive Communication</li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

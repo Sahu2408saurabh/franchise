@@ -1,0 +1,57 @@
+.global-section {
+  background: #fff6e8;
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.global-text {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.global-text .red {
+  color: maroon;
+  font-style: italic;
+}
+
+/* SLIDER */
+.flag-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.flag-track {
+  display: flex;
+  width: max-content;
+  animation: slide 30s linear infinite;
+}
+
+.flag-track img {
+  width: 120px;
+  height: auto;
+  margin: 0 20px;
+}
+
+/* ANIMATION */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .global-text {
+    font-size: 18px;
+  }
+
+  .flag-track img {
+    width: 80px;
+    margin: 0 12px;
+  }
+}

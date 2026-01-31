@@ -9,6 +9,7 @@ import WhyPartner from "./components/WhyPartner/WhyPartner";
 import WhyPartnerProcess from "./components/WhyPartnerProcess/WhyPartnerProcess";
 import Need from "./components/NeedSection/Need";
 import Invest from "./components/Invest/Invest";
+import GlobalExposure from "./components/GlobalExposure/GlobalExposure";
 
 
 function App() {
@@ -16,9 +17,11 @@ function App() {
     <>
       <Navbar />
       <Hero/>
+      <GlobalExposure/>
+        <Invest/>
       <Need/>
 
-      <Invest/>
+    
       
 
       <AboutUs/>

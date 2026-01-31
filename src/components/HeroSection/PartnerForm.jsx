@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
 import "./PartnerForm.css";
 
 const PartnerForm = () => {
- const countries = [
+   const countries = [
   "Afghanistan","Albania","Algeria","Andorra","Angola",
   "Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan",
 
@@ -74,7 +72,6 @@ const PartnerForm = () => {
   "Zambia","Zimbabwe"
 ];
 
-
   const initialFormState = {
     fullName: "",
     emailAddress: "",
@@ -101,109 +98,99 @@ const PartnerForm = () => {
   };
 
   return (
-  <div className="">
-    <h2 className="text-center text">Own the Future</h2>
+    <div className="partner-section">
+      <h2 className="heading">Own the Future</h2>
+      <p className="sub-heading">
+        Bring USA’s Global Preschool Experience <br />
+        to Your City
+      </p>
 
-    <p  className="text-center ">Bring USA’s Global Preschool Experience to Your City</p>
+      <div className="outer-card">
+        <h3 className="card-title">Book a Call</h3>
 
-        <h3 className="text-center   mb-1">Book a Call </h3>
-      <div className="partner-wrapper d-flex justify-content-center   margin-top-20">
-        
-      <div className="partner-card bg-warning shadow">
-
-        {/* <div className="text-center mb-2">
-          <span className="badge franchise-badge">Franchise Opportunity</span>
-        </div> */}
-
-        
-        
-
-        <form onSubmit={handleSubmit} >
-
-          <div className="mb-2">
-            <label className="form-label small">Full Name *</label>
-            <input
-              type="text"
-              className="form-control"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="mb-2">
-            <label className="form-label small">Email Address *</label>
-            <input
-              type="email"
-              className="form-control"
-              name="emailAddress"
-              value={formData.emailAddress}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="mb-2">
-            <label className="form-label small">Mobile Number *</label>
-            <input
-              type="tel"
-              className="form-control"
-              name="mobileNumber"
-              value={formData.mobileNumber}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="row">
-            <div className="col-6 mb-2">
-              <label className="form-label small">Country *</label>
-              <select
-                className="form-select"
-                name="country"
-                value={formData.country}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Select</option>
-                {countries.map((c, i) => (
-                  <option key={i}>{c}</option>
-                ))}
-              </select>
-            </div>
-
-            <div className="col-6 mb-2">
-              <label className="form-label small">ZIP Code *</label>
+        <div className="inner-card">
+          <form onSubmit={handleSubmit}>
+            <div className="mb-2">
+              <label className="form-label">Full Name *</label>
               <input
                 type="text"
                 className="form-control"
-                name="zipCode"
-                value={formData.zipCode}
+                name="fullName"
+                value={formData.fullName}
                 onChange={handleChange}
+                placeholder="Fareya"
                 required
               />
             </div>
-          </div>
-          
 
-          <div className="form-check mb-2">
-          
+            <div className="mb-2">
+              <label className="form-label">Email Address *</label>
+              <input
+                type="email"
+                className="form-control"
+                name="emailAddress"
+                value={formData.emailAddress}
+                onChange={handleChange}
+                placeholder="fareya@gmail.com"
+                required
+              />
+            </div>
 
-          </div>
+            <div className="mb-2">
+              <label className="form-label">Mobile Number *</label>
+              <input
+                type="tel"
+                className="form-control"
+                name="mobileNumber"
+                value={formData.mobileNumber}
+                onChange={handleChange}
+                placeholder="+91-0000000000"
+                required
+              />
+            </div>
 
-          <button type="submit" className="btn btn-danger w-80 py-1 fw-semibold">
-            Verify Mobile Number →
-          </button>
+            <div className="row">
+              <div className="col-6 mb-2">
+                <label className="form-label">Country *</label>
+                <select
+                  className="form-select"
+                  name="country"
+                  value={formData.country}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select Country</option>
+                  {countries.map((c, i) => (
+                    <option key={i} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-         
+              <div className="col-6 mb-3">
+                <label className="form-label">ZIP Code *</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="zipCode"
+                  value={formData.zipCode}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
 
-          
-
-        </form>
+            {/* CENTER BUTTON */}
+            <div className="text-center">
+              <button type="submit" className="btn btn-danger submit-btn">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
   );
 };
 
